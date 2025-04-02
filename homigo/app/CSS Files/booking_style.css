@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import './about_style.css';
+
+:root {
+    --primary-color: #2a9d8f;
+    --secondary-color: #264653;
+    --accent-color: #e9c46a;
+    --light-gray: #c0c0c0; 
+    --border-color: #808080; 
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.booking-page {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px !important;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    background-color: white;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 10px auto 30px; 
+    color: var(--secondary-color);
+    font-size: 32px;
+    font-weight: 700;
+    
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px 25px;
+    max-width: 350px;
+    background-color: white;
+    box-shadow: var(--shadow);
+    position: relative;
+    z-index: 1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) minmax(400px, 2fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.your_trip-card {
+    padding: 30px;
+    max-height: 280px; 
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.date-container + div,
+.guest-container + div {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333; 
+}
+
+.your_trip-card > div {
+    margin-bottom: 10px; 
+}
+
+.your_trip-card > div:last-child {
+    margin-bottom: 5px; 
+}
+
+.your_trip-card, .property-card, .payment-box, .price-box {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color); 
+}
+
+.property-card {
+    padding: 30px;
+}
+
+.date-container, .guest-container {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.edit-btn {
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.edit-btn:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.property-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.property-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.property-details {
+    padding: 25px;
+}
+
+.property-details h3 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.property-details p {
+    color: #666;
+    margin-bottom: 0;
+}
+
+.payment-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 200px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.payment-box {
+    max-width: 100%;
+    margin: 0; 
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.price-box {
+    max-width: 100%;
+    margin: 0;
+    max-height: 420px; 
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.price-box .section-title {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.price-details {
+    width: 100%;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    color: #444;
+}
+
+.price-row:last-of-type {
+    margin-bottom: 0;
+}
+
+.price-label {
+    text-align: left;
+    font-size: 16px;
+}
+
+.price-value {
+    text-align: right;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.price-subtotal {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border-color);
+    font-size: 17px;
+}
+
+.price-total {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid var(--border-color);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.price-notes {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+    text-align: right;
+    font-style: italic;
+}
+
+.card-details {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #444;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+.form-row .form-group {
+    flex: 1;
+}
+
+.payment-disclaimer {
+    margin-top: 10px;
+    padding: 12px 15px;
+    background-color: #f8f8f8;
+    border-left: 4px solid var(--accent-color);
+    color: #555;
+    font-size: 14px;
+    border-radius: 0 4px 4px 0;
+}
+
+.card-details, .payment-disclaimer {
+    display: none;
+}
+
+.card-details.active, .payment-disclaimer.active {
+    display: block !important;
+}
+
+.confirm-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(42, 157, 143, 0.3);
+    max-width: 300px;
+}
+
+@media (max-width: 768px) {
+.grid-container {
+    max-height: none;
+}
+
+.property-item img {
+    min-height: auto;
+}
+}
+
+@media (max-width: 900px) {
+    .payment-container {
+        grid-template-columns: 1fr;
+        margin-bottom: 30px;
+    }
+}
