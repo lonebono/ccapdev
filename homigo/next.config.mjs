@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    images: {
-      domains: ["res.cloudinary.com"],
-    },
-  };
-
-export default nextConfig;
+module.exports = {
+  images: {
+    domains: ["res.cloudinary.com"], // Cloudinary domain added for image optimization
+  },
+};
